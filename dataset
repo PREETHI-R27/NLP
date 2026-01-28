@@ -1,0 +1,8 @@
+Tweet,Score,Sentiment
+I love this new product! Excellent experience.,0.5568181818181818,Positive
+The service was terrible and slow.,-0.65,Negative
+"It's okay, not the best but works.",0.75,Positive
+Absolutely fantastic performance!,0.5,Positive
+"Poor quality, I regret buying this.",-0.4,Negative
+Decent for the price.,0.16666666666666666,Positive
+Highly recommended for all professionals.,0.16,Positive
