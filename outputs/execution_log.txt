@@ -1,0 +1,5 @@
+Project: Twitter Sentiment Analysis
+Status: Completed
+Tool: TextBlob
+Results: Analyzed sentiments of sample tweets (Positive, Negative, Neutral).
+Description: NLP sentiment analysis to categorize customer feedback.
