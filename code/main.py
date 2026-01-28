@@ -5,8 +5,9 @@ import os
 
 def run_sentiment_analysis():
     print("Running Sentiment Analysis on Tweets with White Background...")
-    os.makedirs('images', exist_ok=True)
-    os.makedirs('dataset', exist_ok=True)
+    os.makedirs('../images', exist_ok=True)
+    os.makedirs('../dataset', exist_ok=True)
+    os.makedirs('../outputs', exist_ok=True)
     
     tweets = [
         "I love this new product! Excellent experience.",
@@ -26,7 +27,7 @@ def run_sentiment_analysis():
         analysis.append([t, sentiment, label])
         
     df = pd.DataFrame(analysis, columns=['Tweet', 'Score', 'Sentiment'])
-    df.to_csv('dataset/sentiment_results.csv', index=False)
+    df.to_csv('../dataset/sentiment_results.csv', index=False)
 
     # Plot with White Background
     plt.figure(figsize=(10, 6), facecolor='white')
@@ -36,8 +37,12 @@ def run_sentiment_analysis():
     plt.ylabel('Count')
     plt.xticks(rotation=0)
     plt.grid(axis='y', linestyle='--', alpha=0.4)
-    plt.savefig('images/sentiment_chart.png', facecolor='white')
+    plt.savefig('../images/sentiment_chart.png', facecolor='white')
     plt.close()
+
+    with open('../outputs/execution_log.txt', 'w') as f:
+        f.write("Project: Twitter Sentiment Analysis\nStatus: Completed\n")
+
     print("Success: Sentiment analysis complete with white background.")
 
 if __name__ == "__main__":
